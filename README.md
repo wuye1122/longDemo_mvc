@@ -7,5 +7,7 @@
 * 切换不同的容器 tocmat/jetty
 
 #### :book: 防止老年痴呆 两个 
-
+ 
+ * responsedBody : login/get
+ * views : login/getAll    
                               
