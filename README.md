@@ -10,4 +10,9 @@
  
  * responsedBody : login/get
  * views : login/getAll    
-                              
+                            
+#### windows 重新安装git 
+做完系统之后需要重新操作//复习一下 安装的命令  
+* 如何配置git
+
+* 如何将本地和远程关联起来
