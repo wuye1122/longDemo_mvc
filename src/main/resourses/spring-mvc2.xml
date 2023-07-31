@@ -11,8 +11,8 @@
 
     <!-- 开启spring自动注入 -->
     <context:annotation-config/>
-    <!-- 自动注入扫描包 -->
-    <context:component-scan base-package="com" />
+    <!-- 自动注入扫描包 真这真的是一个大坑数组越界了 加载太多了 -->
+    <context:component-scan base-package="com.contorller,com.mapper,com.po,com.service" />
     <!-- 开启springmvc自动注入 -->
     <mvc:annotation-driven/>
 
