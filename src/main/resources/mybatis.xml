@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<settings>
+    <!-- will show all the sql and no thread no time-->
+ <!--   Creating a new SqlSession
+    SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38bac00d] was not registered for synchronization because synchronization is not active
+    JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@aba6f0b] will not be managed by Spring
+    ooo Using Connection [com.mysql.cj.jdbc.ConnectionImpl@aba6f0b]
+    ==>  Preparing: select d_id,d_department,d_name from department limit 1
+    ==> Parameters:
+    <==    Columns: d_id, d_department, d_name
+    <==        Row: 1, test, lemon
+    Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38bac00d]
+   -->
+<!--
+    <setting name="logImpl" value="STDOUT_LOGGING"/>
+-->
+
+
+
+   <!-- org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:106) - Creating a new SqlSession
+    org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:142) - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71f987d1] was not registered for synchronization because synchronization is not active
+    org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:110) - Fetching JDBC Connection from DataSource
+    org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:85) - JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@25562842] will not be managed by Spring
+    org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:132) - ooo Using Connection [com.mysql.cj.jdbc.ConnectionImpl@25562842]
+    org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:132) - ==>  Preparing: select d_id,d_department,d_name from department limit 1
+    org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:132) - ==> Parameters:
+    org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:170) - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71f987d1]
+    org.springframework.jdbc.datasource.DataSourceUtils.doReleaseConnection(DataSourceUtils.java:332) - Returning JDBC Connection to DataSource -->
+    <setting name="logImpl" value="LOG4J"/>
+</settings>
+</configuration>
+
