@@ -20,6 +20,15 @@ import java.util.List;
 @RequestMapping("/login")
 public class Login {
 
+    @RequestMapping("/index")
+    public String index(){
+        logger.debug("getIndex.....");
+        logger.info("getIndex.....");
+        logger.error("getIndex.....");
+        System.out.println("Index......");
+        return "index";
+    }
+
     private static final Logger logger=Logger.getLogger(Login.class);
      Login(){
          System.out.println("asdad");
