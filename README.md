@@ -5,10 +5,45 @@
 里程碑：2024/11/19 起到成功一次
 ```
 #### 如何启动并且开始访问
-* please download 1）idea jetty run 2） configure start config need download new jar
-* Access first Page (check server)： http://localhost:8082/longDemo
-* Access new request (check db):     http://localhost:8082/longDemo/login/getAll
 
+1. 直接刷新pom文件  
+2. 更改数据库密码 并且创建数据库
+```mysql
+create database test;
+
+create table test.`department`
+(
+    `d_id`         int         not null auto_increment,
+    `d_department` varchar(32) not null,
+    `d_name`       varchar(32) not null,
+    `create_time`  timestamp   not null default current_timestamp,
+    `update_time`  timestamp   not null default current_timestamp on update current_timestamp,
+    primary key (`d_id`)
+);
+
+INSERT INTO test.department (d_department, d_name, create_time, update_time) VALUES ('test', 'lemon', DEFAULT, DEFAULT)
+
+```
+
+3. 日志级别debug
+4. 重新删除target 重新设置jdk1.8 进行编译
+
+```shell
+
+/usr/local/apache-maven-3.9.6/bin/mvn jetty:run -Djava.home=/Library/java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/
+
+配置完环境变量
+mvn jetty:run 
+
+```
+
+//不需要加项目名称？
+* can access http://localhost:8014/;
+* Access first Page (check server)： 
+* Access new request (check db):
+1. http://localhost:8014/login/index
+2. http://localhost:8014/login/get
+3. http://localhost:8014/login/getAll
 
 
 #### :book: 1000个人读红楼梦有1000个林黛玉,一个我怎么每次创建ssm都会遇到不同的"林黛玉"呢？
