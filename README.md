@@ -3,6 +3,14 @@
 这个是一个spring的项目 还有webapp的文件夹
 
 里程碑：2024/11/19 入职新公司 前一天本地居然可以成功push
+spring：
+    <spring.version>3.1.1.RELEASE</spring.version>
+    
+mybatis：
+  <artifactId>mybatis</artifactId>
+      <version>3.2.1</version>
+      
+      
 ```
 #### 如何启动并且开始访问
 
